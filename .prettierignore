@@ -1,0 +1,3 @@
+# Ignore component/ui/.tsx*
+
+./src/components/ui
