@@ -43,7 +43,7 @@ export async function createUser(formData: FormData) {
     });
     return { success: true, message: "User created successfully." };
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return { success: false, message: "Error creating user." };
   }
 }
@@ -61,7 +61,7 @@ export async function updateUser(formData: FormData, id: number) {
     });
     return { success: true, message: "User updated successfully." };
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return { success: false, message: "Error updating user." };
   }
 }
@@ -71,7 +71,7 @@ export async function deleteUser(id: number) {
     await prisma.user.delete({ where: { id } });
     return { success: true, message: "User deleted successfully." };
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return { success: false, message: "Error deleting user." };
   }
 }
@@ -81,7 +81,7 @@ export async function verifyToken(token: string) {
   try {
     return jwt.verify(token, secretToken);
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return null;
   }
 }
