@@ -20,7 +20,7 @@ export default function RedoAnimText() {
     animate(count, 550, {
       type: "tween",
       delay: 12,
-      duration: 5,
+      duration: 15,
       ease: "easeIn",
       onUpdate(latest) {
         if (updatedThisRound.get() === true && latest > 0) {

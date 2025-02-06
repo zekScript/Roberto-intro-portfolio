@@ -106,13 +106,7 @@ export async function loginUser(formData: FormData) {
     role: user.role,
     name: user.name,
     updatedAt: user.updatedAt,
-    createdAt: user.createdAt,
-    // friendsCount: user.friendsCount,
-    followersCount: user.followersCount,
-    followingCount: user.followingCount,
-    postsCount: user.postsCount,
-    profilePic: user.profilePic,
-    bio: user.bio,
+    createdAt: user.createdAt,    
   };
 
   const token = jwt.sign(tokenPayload, secretToken);

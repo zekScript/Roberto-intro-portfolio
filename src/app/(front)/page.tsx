@@ -5,6 +5,8 @@ import { useRef } from "react";
 import Loader from "@/components/anims/Loader";
 import A4Animation from "@/components/anims/TextLayout";
 import { ArrowUpRight } from "lucide-react";
+import Link from 'next/link'; 
+
 
 import * as React from "react"
  
@@ -45,7 +47,7 @@ const Home: React.FC = () => {
       <div className="m-auto flex justify-center">
         <div className="h-[300px] w-[80%] rounded-[2rem]">
           <div className="w-full flex justify-center flex-col">
-            <h1 className="text-6xl font-extrabold z-50">
+            <h1 className="text-6xl font-extrabold ">
               ARMANDAS LATANAUSKAS
             </h1>
             <p className="text-3xl text-start font-normal text-slate-600">
@@ -130,7 +132,8 @@ const Home: React.FC = () => {
 
           {/* Carousel */}
 
-          <div className="w-full flex justify-center mt-20">
+          
+<div className="w-full flex justify-center mt-20">
   <Carousel
     opts={{
       align: "start",
@@ -139,22 +142,24 @@ const Home: React.FC = () => {
   >
     <CarouselContent>
       {[
-        "/Showcase1.png",
-        "/Showcase2.png",
-        "/Showcase3.png",
-        "/Showcase4.png",
-      ].map((src, index) => (
+        { src: "/Showcase1.png", link: "/blog/cms" },
+        { src: "/Showcase2.png", link: "/blog/maiden-clicker" },
+        { src: "/Showcase3.png", link: "/blog/origin-portfolio" },
+        { src: "/Showcase4.png", link: "/blog/refined-dot-tf" },
+      ].map((item, index) => (
         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
           <div className="p-2">
-            <Card className="shadow-lg">
-              <CardContent className="flex aspect-[4/3] items-center justify-center p-0">
-                <img
-                  src={src}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </CardContent>
-            </Card>
+            <Link href={item.link} passHref>
+              <Card className="shadow-lg">
+                <CardContent className="flex aspect-[4/3] items-center justify-center p-0">
+                  <img
+                    src={item.src}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </CarouselItem>
       ))}
@@ -168,7 +173,7 @@ const Home: React.FC = () => {
 
 
 
-      <div className="w-full flex justify-center mt-96">
+      <div className="w-full mt-96">
                   <h1 className="text-9xl font-extrabold z-50">
                     LET'S GET TO WORK
                   </h1>
