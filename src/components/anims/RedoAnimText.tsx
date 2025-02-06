@@ -39,7 +39,7 @@ export default function RedoAnimText() {
   }, []);
 
   return (
-    <motion.span className="inline text-3xl font-medium">
+    <motion.span className=" text-3xl font-medium hidden md:inline">
       {displayText}
     </motion.span>
   );
