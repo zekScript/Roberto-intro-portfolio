@@ -59,7 +59,7 @@ export function TopBar() {
                 </Button>
               </div>
             ) : (
-              <div className="mb-4 mt-3 hidden w-full justify-end gap-x-4 lg:flex">
+              <div className="mb-4 mt-3 flex w-full justify-end gap-x-4">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Avatar className="cursor-pointer">
