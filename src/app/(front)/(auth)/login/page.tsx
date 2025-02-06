@@ -1,7 +1,6 @@
 "use client";
 
 import { loginUser } from "../../../../server/user";
-import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -57,7 +56,7 @@ export default function LoginPage() {
               Log In
             </button>
           </form>
-  
+
           {feedback.message && (
             <div
               className={`mt-4 w-full rounded-md p-3 text-center ${
@@ -69,15 +68,13 @@ export default function LoginPage() {
               {feedback.message}
             </div>
           )}
-  
+
           <Link className="mt-5" href="/signin">
             Don’t have an account? Sign Up
           </Link>
           <Link href="/">Go Back home</Link>
-
         </div>
       </div>
     </>
   );
-  
 }

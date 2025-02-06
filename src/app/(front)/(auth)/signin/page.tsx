@@ -1,6 +1,5 @@
 "use client";
 import { createUser } from "../../../../server/user";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
@@ -104,26 +103,34 @@ const SignIn: React.FC = () => {
                 className={`flex text-sm ${validation.length ? "text-green-500" : "text-red-500"}`}
               >
                 - At least 8 characters{" "}
-                <span className="ml-2">{validation.length ? <Check /> : <X />}</span>
+                <span className="ml-2">
+                  {validation.length ? <Check /> : <X />}
+                </span>
               </p>
 
               <p
                 className={`flex text-sm ${validation.uppercase ? "text-green-500" : "text-red-500"}`}
               >
                 - At least one uppercase letter{" "}
-                <span className="ml-2">{validation.uppercase ? <Check /> : <X />}</span>
+                <span className="ml-2">
+                  {validation.uppercase ? <Check /> : <X />}
+                </span>
               </p>
               <p
                 className={`flex text-sm ${validation.number ? "text-green-500" : "text-red-500"}`}
               >
                 - At least one number{" "}
-                <span className="ml-2">{validation.number ? <Check /> : <X />}</span>
+                <span className="ml-2">
+                  {validation.number ? <Check /> : <X />}
+                </span>
               </p>
               <p
                 className={`flex text-sm ${validation.specialChar ? "text-green-500" : "text-red-500"}`}
               >
                 - At least one special character{" "}
-                <span className="ml-2">{validation.specialChar ? <Check /> : <X />}</span>
+                <span className="ml-2">
+                  {validation.specialChar ? <Check /> : <X />}
+                </span>
               </p>
             </div>
             <button
