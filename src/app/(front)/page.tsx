@@ -72,7 +72,7 @@ const Home: React.FC = () => {
             </h1>
           </div>
           {/* Cards */}
-          <div className="flex flex-col mt-20 mr-20 gap-y-2">
+          <div className="flex flex-col mt-6 mb-6 mr-20 gap-y-2">
             <div className="flex w-[100%] h-[70%] bg-background">
               <div className="flex w-full h-full items-center text-2xl">
                 <ArrowUpRight className="ml-8" size={32} />
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
           opts={{
             align: "start",
           }}
-          className="w-full max-w-2xl" // Wider carousel
+          className="w-full max-w-full" // Wider carousel
         >
           <CarouselContent>
             {[

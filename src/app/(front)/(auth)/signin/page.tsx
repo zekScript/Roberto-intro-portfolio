@@ -56,7 +56,7 @@ const SignIn: React.FC = () => {
     <>
       <div className="flex w-full items-center justify-center">
         <div className="flex w-full max-w-md flex-col items-center justify-center bg-background shadow-lg rounded-lg">
-          <h1 className="mb-6 text-3xl font-bold">Sign Up</h1>
+          <h1 className="mb-6 text-3xl text-[orangered] font-bold">Sign Up</h1>
           <form
             className="w-full"
             onSubmit={(e) => {
@@ -70,7 +70,7 @@ const SignIn: React.FC = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mb-4 w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mb-4 w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <input
               type="email"
@@ -78,7 +78,7 @@ const SignIn: React.FC = () => {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mb-4 w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mb-4 w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
 
             <div className="relative">
@@ -88,7 +88,7 @@ const SignIn: React.FC = () => {
                 name="password"
                 value={password}
                 onChange={(e) => validatePassword(e.target.value)}
-                className="mb-2 w-full rounded-md border border-gray-300 p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mb-2 w-full rounded-md border border-gray-300 p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-red-500"
               />
               <button
                 onClick={togglePasswordVisibility}
@@ -135,7 +135,7 @@ const SignIn: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-full rounded-md bg-blue-500 p-3 text-white hover:bg-blue-600"
+              className="w-full rounded-md bg-[orangered] p-3 text-white hover:bg-[rgb(100%,30%,0%)]"
             >
               Sign Up
             </button>

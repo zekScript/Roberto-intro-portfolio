@@ -25,7 +25,7 @@ export default function LoginPage() {
     <>
       <div className="flex w-full items-center justify-center">
         <div className="flex w-full max-w-md flex-col items-center justify-center p-8 bg-background shadow-lg rounded-lg">
-          <h1 className="mb-6 text-3xl font-bold">Log In</h1>
+          <h1 className="mb-6 text-3xl text-[orangered] font-bold">Log In</h1>
           <form
             className="w-full"
             onSubmit={(e) => {
@@ -51,7 +51,7 @@ export default function LoginPage() {
             />
             <button
               type="submit"
-              className="w-full rounded-md bg-blue-500 p-3 text-white hover:bg-blue-600"
+              className="w-full rounded-md bg-[orangered] p-3 text-white "
             >
               Log In
             </button>
